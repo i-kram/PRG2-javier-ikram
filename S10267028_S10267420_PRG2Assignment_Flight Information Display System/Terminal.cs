@@ -10,6 +10,7 @@ namespace S10267028_S10267420_PRG2Assignment_Flight_Information_Display_System
         {
         public int TerminalName { get; set; }
         public string terminalLocation { get; set; }
+        aaaaa
 
     }
     }
