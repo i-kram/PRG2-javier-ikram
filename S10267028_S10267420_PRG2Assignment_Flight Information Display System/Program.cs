@@ -1,84 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 
 class Program
     {
-    static Dictionary<string, Airline> Airlines = new Dictionary<string, Airline>();
-    static Dictionary<string, BoardingGate> BoardingGates = new Dictionary<string, BoardingGate>();
-    static List<Flight> Flights = new List<Flight>();
+    List<Airline> Airlines = new List<Airline>();
+    List<BoardingGate> BoardingGates = new List<BoardingGate>();
+    List<Flight> Flights = new List<Flight>();
 
-    static void Main(string[] args)
+    void LoadAirlines(string filename)
         {
         Console.WriteLine("Loading Airlines...");
-        LoadAirlines("airlines.csv");
-        Console.WriteLine($"{Airlines.Count} Airlines Loaded!");
-
-        Console.WriteLine("Loading Boarding Gates...");
-        LoadBoardingGates("boardinggates.csv");
-        Console.WriteLine($"{BoardingGates.Count} Boarding Gates Loaded!");
-
-        Console.WriteLine("Loading Flights...");
-        LoadFlights("flights.csv");
-        Console.WriteLine($"{Flights.Count} Flights Loaded!");
-
-        while (true)
-            {
-            DisplayMenu();
-            string choice = Console.ReadLine();
-
-            switch (choice)
-                {
-                case "1":
-                    ListAllFlights();
-                    break;
-                case "2":
-                    ListBoardingGates();
-                    break;
-                case "0":
-                    return;
-                default:
-                    Console.WriteLine("Invalid option. Please try again.");
-                    break;
-                }
-            }
-        }
-
-    static void DisplayMenu()
-        {
-        Console.WriteLine("\n\n\n=============================================");
-        Console.WriteLine("Welcome to Changi Airport Terminal 5");
-        Console.WriteLine("=============================================");
-        Console.WriteLine("1. List All Flights");
-        Console.WriteLine("2. List Boarding Gates");
-        Console.WriteLine("3. Assign a Boarding Gate to a Flight");
-        Console.WriteLine("4. Create Flight");
-        Console.WriteLine("5. Display Airline Flights");
-        Console.WriteLine("6. Modify Flight Details");
-        Console.WriteLine("7. Display Flight Schedule");
-        Console.WriteLine("0. Exit");
-        Console.Write("\nPlease select your option: ");
-        }
-
-    static void LoadAirlines(string filename)
-        {
         try
             {
             string[] lines = File.ReadAllLines(filename);
-            foreach (var line in lines.Skip(1)) // Skip header
+            for (int i = 1; i < lines.Length; i++)
                 {
-                string[] parts = line.Split(',');
+                string[] parts = lines[i].Split(',');
                 if (parts.Length >= 2)
                     {
-                    var airline = new Airline
+                    Airline airline = new Airline
                         {
                         Name = parts[0],
                         Code = parts[1]
                         };
-                    Airlines[airline.Code] = airline;
+                    Airlines.Add(airline);
                     }
                 }
+            Console.WriteLine($"{Airlines.Count} Airlines Loaded!");
             }
         catch (Exception ex)
             {
@@ -86,26 +35,28 @@ class Program
             }
         }
 
-    static void LoadBoardingGates(string filename)
+    void LoadBoardingGates(string filename)
         {
+        Console.WriteLine("Loading Boarding Gates...");
         try
             {
             string[] lines = File.ReadAllLines(filename);
-            foreach (var line in lines.Skip(1)) // Skip header
+            for (int i = 1; i < lines.Length; i++)
                 {
-                string[] parts = line.Split(',');
-                if (parts.Length >= 5)
+                string[] parts = lines[i].Split(',');
+                if (parts.Length >= 4)
                     {
-                    var gate = new BoardingGate
+                    BoardingGate gate = new BoardingGate
                         {
                         GateName = parts[0],
-                        SupportsCFFT = bool.Parse(parts[1]),
-                        SupportsDDJB = bool.Parse(parts[2]),
-                        SupportsLWTT = DateTime.Parse(parts[3])
+                        SupportsDDJB = ConvertToBoolean(parts[1]),
+                        SupportsCFFT = ConvertToBoolean(parts[2]),
+                        SupportsLWTT = ConvertToBoolean(parts[3])
                         };
-                    BoardingGates[gate.GateName] = gate;
+                    BoardingGates.Add(gate);
                     }
                 }
+            Console.WriteLine($"{BoardingGates.Count} Boarding Gates Loaded!");
             }
         catch (Exception ex)
             {
@@ -113,35 +64,36 @@ class Program
             }
         }
 
-    static void LoadFlights(string filename)
+    void LoadFlights(string filename)
         {
+        Console.WriteLine("Loading Flights...");
         try
             {
             string[] lines = File.ReadAllLines(filename);
-            foreach (var line in lines.Skip(1)) // Skip header
+            for (int i = 1; i < lines.Length; i++)
                 {
-                string[] parts = line.Split(',');
-                if (parts.Length >= 5)
+                string[] parts = lines[i].Split(',');
+                if (parts.Length >= 4)
                     {
-                    var flight = new Flight
+                    DateTime expectedTime = DateTime.ParseExact(
+                        parts[3] + " " + DateTime.Now.Year,
+                        "h:mm tt yyyy",
+                        null
+                    );
+
+                    Flight flight = new Flight
                         {
                         FlightNumber = parts[0],
                         Origin = parts[1],
                         Destination = parts[2],
-                        ExpectedTime = DateTime.Parse(parts[3]),
-                        Status = parts[4]
+                        ExpectedTime = expectedTime,
+                        Status = parts.Length > 4 ? parts[4] : ""
                         };
-
-                    // Find and set the airline
-                    string airlineCode = parts[0].Split()[0];
-                    if (Airlines.TryGetValue(airlineCode, out Airline airline))
-                        {
-                        airline.AddFlight(flight);
-                        }
 
                     Flights.Add(flight);
                     }
                 }
+            Console.WriteLine($"{Flights.Count} Flights Loaded!");
             }
         catch (Exception ex)
             {
@@ -149,7 +101,8 @@ class Program
             }
         }
 
-    static void ListAllFlights()
+
+    void ListAllFlights()
         {
         Console.WriteLine("=============================================");
         Console.WriteLine("List of Flights for Changi Airport Terminal 5");
@@ -157,10 +110,9 @@ class Program
         Console.WriteLine("{0,-15}{1,-25}{2,-25}{3,-25}{4,-30}",
             "Flight Number", "Airline Name", "Origin", "Destination", "Expected Departure/Arrival Time");
 
-        foreach (var flight in Flights.OrderBy(f => f.ExpectedTime))
+        foreach (Flight flight in Flights)
             {
-            string airlineName = Airlines.Values
-                .FirstOrDefault(a => flight.FlightNumber.StartsWith(a.Code))?.Name ?? "Unknown";
+            string airlineName = Airlines.Find(a => flight.FlightNumber.StartsWith(a.Code))?.Name ?? "Unknown";
 
             Console.WriteLine("{0,-15}{1,-25}{2,-25}{3,-25}{4,-30}",
                 flight.FlightNumber,
@@ -171,8 +123,77 @@ class Program
             }
         }
 
-    static void ListBoardingGates()
+    bool ConvertToBoolean(string value)
         {
-        // Implement boarding gate listing logic as needed
+        if (value.ToLower() == "true")
+            return true;
+        if (value.ToLower() == "false")
+            return false;
+        throw new FormatException($"Invalid boolean value: {value}");
+        }
+
+    void ListBoardingGates()
+        {
+        Console.WriteLine("=============================================");
+        Console.WriteLine("List of Boarding Gates for Changi Airport Terminal 5");
+        Console.WriteLine("=============================================");
+        Console.WriteLine("{0,-15}{1,-22}{2,-22}{3,-22}",
+            "Gate Name", "DDJB", "CFFT", "LWTT");
+
+        foreach (BoardingGate gate in BoardingGates)
+            {
+            Console.WriteLine("{0,-15}{1,-22}{2,-22}{3,-22}",
+                gate.GateName,
+                gate.SupportsDDJB ? "True" : "False",
+                gate.SupportsCFFT ? "True" : "False",
+                gate.SupportsLWTT ? "True" : "False");
+            }
+        }
+
+    void MainMenu()
+        {
+        Console.WriteLine("\n\n\n=============================================");
+        Console.WriteLine("Welcome to Changi Airport Terminal 5");
+        Console.WriteLine("=============================================");
+        Console.WriteLine("1. List All Flights");
+        Console.WriteLine("2. List Boarding Gates");
+        Console.WriteLine("0. Exit");
+        Console.Write("\nPlease select your option: ");
+        }
+
+    void Run()
+        {
+        LoadAirlines("airlines.csv");
+        LoadBoardingGates("boardinggates.csv");
+        LoadFlights("flights.csv");
+
+        while (true)
+            {
+            MainMenu();
+            string choice = Console.ReadLine();
+
+            if (choice == "1")
+                {
+                ListAllFlights();
+                }
+            else if (choice == "2")
+                {
+                ListBoardingGates();
+                }
+            else if (choice == "0")
+                {
+                break;
+                }
+            else
+                {
+                Console.WriteLine("Invalid option. Please try again.");
+                }
+            }
+        }
+
+    static void Main()
+        {
+        Program program = new Program();
+        program.Run();
         }
     }
