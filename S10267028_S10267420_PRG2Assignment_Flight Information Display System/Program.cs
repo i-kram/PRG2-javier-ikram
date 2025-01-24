@@ -6,6 +6,7 @@ List<Airline> Airlines = new List<Airline>();
 List<BoardingGate> BoardingGates = new List<BoardingGate>();
 List<Flight> Flights = new List<Flight>();
 
+//Basic Feature 1
 void LoadAirlines(string filename)
     {
     Console.WriteLine("Loading Airlines...");
@@ -33,6 +34,7 @@ void LoadAirlines(string filename)
         }
     }
 
+//Basic Feature 1
 void LoadBoardingGates(string filename)
     {
     Console.WriteLine("Loading Boarding Gates...");
@@ -62,6 +64,8 @@ void LoadBoardingGates(string filename)
         }
     }
 
+
+//Basic Feature 2
 void LoadFlights(string filename)
     {
     Console.WriteLine("Loading Flights...");
@@ -99,6 +103,7 @@ void LoadFlights(string filename)
         }
     }
 
+//Basic Feature 3
 void ListAllFlights()
     {
     Console.WriteLine("=============================================");
@@ -138,6 +143,8 @@ bool ConvertToBoolean(string value)
     throw new FormatException($"Invalid boolean value: {value}");
     }
 
+
+//Basic Feature 4
 void ListBoardingGates()
     {
     Console.WriteLine("=============================================");
@@ -156,6 +163,97 @@ void ListBoardingGates()
         }
     }
 
+
+//Basic Feature 7
+void DisplayAirlineFlights()
+    {
+    Console.WriteLine("=============================================");
+    Console.WriteLine("List of Airlines for Changi Airport Terminal 5");
+    Console.WriteLine("=============================================");
+    Console.WriteLine("{0,-15}{1,-25}", "Airline Code", "Airline Name");
+
+    foreach (Airline airline in Airlines)
+        {
+        Console.WriteLine("{0,-15}{1,-25}", airline.Code, airline.Name);
+        }
+
+    Console.Write("Enter Airline Code: ");
+    string airlineCode = Console.ReadLine()?.ToUpper();
+
+    Airline selectedAirline = null;
+    foreach (Airline airline in Airlines)
+        {
+        if (airline.Code == airlineCode)
+            {
+            selectedAirline = airline;
+            break;
+            }
+        }
+
+    if (selectedAirline == null)
+        {
+        Console.WriteLine("Invalid Airline Code. Please try again.");
+        return;
+        }
+
+    Console.WriteLine("=============================================");
+    Console.WriteLine($"List of Flights for {selectedAirline.Name}");
+    Console.WriteLine("=============================================");
+    Console.WriteLine("{0,-15}{1,-25}{2,-25}{3,-25}",
+        "Flight Number", "Airline Name", "Origin", "Destination");
+
+    List<Flight> airlineFlights = new List<Flight>();
+    foreach (Flight flight in Flights)
+        {
+        if (flight.FlightNumber.StartsWith(selectedAirline.Code))
+            {
+            airlineFlights.Add(flight);
+            Console.WriteLine("{0,-15}{1,-25}{2,-25}{3,-25}",
+                flight.FlightNumber,
+                selectedAirline.Name,
+                flight.Origin,
+                flight.Destination);
+            }
+        }
+
+    if (airlineFlights.Count == 0)
+        {
+        Console.WriteLine("No flights available for the selected airline.");
+        return;
+        }
+
+    Console.Write("Enter Flight Number: ");
+    string flightNumber = Console.ReadLine();
+
+    Flight selectedFlight = null;
+    foreach (Flight flight in airlineFlights)
+        {
+        if (flight.FlightNumber == flightNumber)
+            {
+            selectedFlight = flight;
+            break;
+            }
+        }
+
+    if (selectedFlight == null)
+        {
+        Console.WriteLine("Invalid Flight Number. Please try again.");
+        return;
+        }
+
+    Console.WriteLine("=============================================");
+    Console.WriteLine("Flight Details");
+    Console.WriteLine("=============================================");
+    Console.WriteLine($"Flight Number: {selectedFlight.FlightNumber}");
+    Console.WriteLine($"Airline Name: {selectedAirline.Name}");
+    Console.WriteLine($"Origin: {selectedFlight.Origin}");
+    Console.WriteLine($"Destination: {selectedFlight.Destination}");
+    Console.WriteLine($"Expected Departure/Arrival Time: {selectedFlight.ExpectedTime:dd/M/yyyy h:mm:ss tt}");
+    //Console.WriteLine($"Special Request Code: {selectedFlight.SpecialRequestCode ?? "None"}");
+    //Console.WriteLine($"Boarding Gate: {selectedFlight.BoardingGate ?? "Not Assigned"}");
+    }
+
+
 void MainMenu()
     {
     Console.WriteLine("\n\n\n=============================================");
@@ -163,6 +261,7 @@ void MainMenu()
     Console.WriteLine("=============================================");
     Console.WriteLine("1. List All Flights");
     Console.WriteLine("2. List Boarding Gates");
+    Console.WriteLine("5. Display Airline Flights");
     Console.WriteLine("0. Exit");
     Console.Write("\nPlease select your option: ");
     }
@@ -185,6 +284,10 @@ void Run()
         else if (choice == "2")
             {
             ListBoardingGates();
+            }
+        else if (choice == "5")
+            {
+            DisplayAirlineFlights();
             }
         else if (choice == "0")
             {
