@@ -182,6 +182,7 @@ class Program
                 }
             else if (choice == "0")
                 {
+                Console.WriteLine("Goodbye!");
                 break;
                 }
             else
