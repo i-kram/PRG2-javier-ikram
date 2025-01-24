@@ -1,12 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace S10267028_S10267420_PRG2Assignment_Flight_Information_Display_System
+public class LWTT
     {
-    internal class LWTT
+    public double RequestFee { get; set; }
+
+    public double CalculateFee()
         {
+        return RequestFee;
+        }
+
+    public override string ToString()
+        {
+        return $"LWTT Request Fee: {RequestFee}";
         }
     }
