@@ -8,5 +8,8 @@ namespace S10267028_S10267420_PRG2Assignment_Flight_Information_Display_System
     {
     internal class Terminal
         {
+
+
+        Console.WriteLine("Welcome to the Flight Information Display System");
         }
     }
