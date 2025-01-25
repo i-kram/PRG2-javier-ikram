@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\Javier Yeo\\Downloads\\PRG 2\\Assignment\\PRG2-javier-ikram\\Flight Information Display System\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Javier Yeo\\Downloads\\PRG 2\\Assignment\\PRG2-javier-ikram\\Flight Information Display System\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Javier Yeo\\Downloads\\PRG 2\\Assignment\\PRG2-javier-ikram\\Flight Information Display System\\Flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Javier Yeo\\Downloads\\PRG 2\\Assignment\\PRG2-javier-ikram\\Flight Information Display System\\LWTTFlight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:LWTTFlight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,14 +35,6 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Airline.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Javier Yeo\\Downloads\\PRG 2\\Assignment\\PRG2-javier-ikram\\Flight Information Display System\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Javier Yeo\\Downloads\\PRG 2\\Assignment\\PRG2-javier-ikram\\Flight Information Display System\\Flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Javier Yeo\\Downloads\\PRG 2\\Assignment\\PRG2-javier-ikram\\Flight Information Display System\\BoardingGate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BoardingGate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -66,18 +66,17 @@
               "RelativeToolTip": "airlines.csv",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002120|",
-              "WhenOpened": "2025-01-25T16:32:50.289Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-25T16:32:50.289Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Javier Yeo\\Downloads\\PRG 2\\Assignment\\PRG2-javier-ikram\\Flight Information Display System\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Javier Yeo\\Downloads\\PRG 2\\Assignment\\PRG2-javier-ikram\\Flight Information Display System\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-25T15:55:45.566Z",
               "EditorCaption": ""
@@ -92,12 +91,11 @@
               "RelativeToolTip": "BoardingGate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T15:54:11.737Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-25T15:54:11.737Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "DDJBFlight.cs",
               "DocumentMoniker": "C:\\Users\\Javier Yeo\\Downloads\\PRG 2\\Assignment\\PRG2-javier-ikram\\Flight Information Display System\\DDJBFlight.cs",
               "RelativeDocumentMoniker": "DDJBFlight.cs",
@@ -105,12 +103,11 @@
               "RelativeToolTip": "DDJBFlight.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T15:46:23.799Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-25T15:46:23.799Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Airline.cs",
               "DocumentMoniker": "C:\\Users\\Javier Yeo\\Downloads\\PRG 2\\Assignment\\PRG2-javier-ikram\\Flight Information Display System\\Airline.cs",
               "RelativeDocumentMoniker": "Airline.cs",
@@ -118,12 +115,11 @@
               "RelativeToolTip": "Airline.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T15:36:39.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-25T15:36:39.013Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Terminal.cs",
               "DocumentMoniker": "C:\\Users\\Javier Yeo\\Downloads\\PRG 2\\Assignment\\PRG2-javier-ikram\\Flight Information Display System\\Terminal.cs",
               "RelativeDocumentMoniker": "Terminal.cs",
@@ -131,25 +127,24 @@
               "RelativeToolTip": "Terminal.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T15:07:58.952Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-25T15:07:58.952Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "LWTTFlight.cs",
               "DocumentMoniker": "C:\\Users\\Javier Yeo\\Downloads\\PRG 2\\Assignment\\PRG2-javier-ikram\\Flight Information Display System\\LWTTFlight.cs",
               "RelativeDocumentMoniker": "LWTTFlight.cs",
               "ToolTip": "C:\\Users\\Javier Yeo\\Downloads\\PRG 2\\Assignment\\PRG2-javier-ikram\\Flight Information Display System\\LWTTFlight.cs",
               "RelativeToolTip": "LWTTFlight.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-25T15:40:49.07Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "CFFTFlight.cs",
               "DocumentMoniker": "C:\\Users\\Javier Yeo\\Downloads\\PRG 2\\Assignment\\PRG2-javier-ikram\\Flight Information Display System\\CFFTFlight.cs",
               "RelativeDocumentMoniker": "CFFTFlight.cs",
@@ -157,12 +152,11 @@
               "RelativeToolTip": "CFFTFlight.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T15:39:28.695Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-25T15:39:28.695Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "NORMFlight.cs",
               "DocumentMoniker": "C:\\Users\\Javier Yeo\\Downloads\\PRG 2\\Assignment\\PRG2-javier-ikram\\Flight Information Display System\\NORMFlight.cs",
               "RelativeDocumentMoniker": "NORMFlight.cs",
@@ -170,18 +164,17 @@
               "RelativeToolTip": "NORMFlight.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-25T15:38:20.002Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-25T15:38:20.002Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "Flight.cs",
               "DocumentMoniker": "C:\\Users\\Javier Yeo\\Downloads\\PRG 2\\Assignment\\PRG2-javier-ikram\\Flight Information Display System\\Flight.cs",
               "RelativeDocumentMoniker": "Flight.cs",
               "ToolTip": "C:\\Users\\Javier Yeo\\Downloads\\PRG 2\\Assignment\\PRG2-javier-ikram\\Flight Information Display System\\Flight.cs",
               "RelativeToolTip": "Flight.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-25T15:37:37.158Z",
               "EditorCaption": ""

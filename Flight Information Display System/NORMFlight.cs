@@ -10,7 +10,7 @@ namespace FlightInformationDisplaySystem
     {
         public override double CalculateFees()
         {
-            return 50.0; // Flat rate for normal flights
+            return 300.0 + 800.0 
         }
 
         public override string ToString()
