@@ -4,9 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace S10267028_S10267420_PRG2Assignment_Flight_Information_Display_System
+namespace FlightInformationDisplaySystem
+{
+    public class NORMFlight : Flight
     {
-    internal class NORM
+        public override double CalculateFees()
         {
+            return 50.0; // Flat rate for normal flights
+        }
+
+        public override string ToString()
+        {
+        return base.ToString() + " (Normal Flight)";
         }
     }
+}

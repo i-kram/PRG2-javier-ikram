@@ -1,16 +1,19 @@
 ﻿using System;
 
-public class DDJB
+namespace FlightInformationDisplaySystem
+{
+    public class DDJBFlight : Flight
     {
-    public double RequestFee { get; set; }
+        public double RequestFee { get; set; }
 
-    public double CalculateFee()
+        public override double CalculateFees()
         {
-        return RequestFee;
+            return 70.0 + RequestFee; // Base fee + additional request fee
         }
 
-    public override string ToString()
+        public override string ToString()
         {
-        return $"DDJB Request Fee: {RequestFee}";
+            return base.ToString() + $" (DDJB Flight, Request Fee: {RequestFee:C})";
         }
     }
+}

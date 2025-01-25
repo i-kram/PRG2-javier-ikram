@@ -1,0 +1,5 @@
+C:\Users\Javier Yeo\Downloads\PRG 2\Assignment\PRG2-javier-ikram\Flight Information Display System\obj\Debug\net8.0\S10267028_S10267420_PRG2Assignment_Flight Information Display System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Javier Yeo\Downloads\PRG 2\Assignment\PRG2-javier-ikram\Flight Information Display System\obj\Debug\net8.0\S10267028_S10267420_PRG2Assignment_Flight Information Display System.AssemblyInfoInputs.cache
+C:\Users\Javier Yeo\Downloads\PRG 2\Assignment\PRG2-javier-ikram\Flight Information Display System\obj\Debug\net8.0\S10267028_S10267420_PRG2Assignment_Flight Information Display System.AssemblyInfo.cs
+C:\Users\Javier Yeo\Downloads\PRG 2\Assignment\PRG2-javier-ikram\Flight Information Display System\obj\Debug\net8.0\S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj.CoreCompileInputs.cache
+C:\Users\Javier Yeo\Downloads\PRG 2\Assignment\PRG2-javier-ikram\Flight Information Display System\obj\Debug\net8.0\S10267028_S10267420_PRG2Assignment_Flight Information Display System.sourcelink.json

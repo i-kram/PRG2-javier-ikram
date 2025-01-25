@@ -1,16 +1,19 @@
 ﻿using System;
 
-public class LWTT
+namespace FlightInformationDisplaySystem
+{
+    public class LWTTFlight : Flight
     {
-    public double RequestFee { get; set; }
+        public double RequestFee { get; set; }
 
-    public double CalculateFee()
+        public override double CalculateFees()
         {
-        return RequestFee;
+            return 80.0 + RequestFee; // Base fee + additional request fee
         }
 
-    public override string ToString()
+        public override string ToString()
         {
-        return $"LWTT Request Fee: {RequestFee}";
+            return base.ToString() + $" (LWTT Flight, Request Fee: {RequestFee:C})";
         }
     }
+}

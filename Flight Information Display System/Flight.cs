@@ -1,21 +1,27 @@
 ﻿using System;
 
-public class Flight
+namespace FlightInformationDisplaySystem
+{
+    public abstract class Flight
     {
-    public string FlightNumber { get; set; }
-    public string Origin { get; set; }
-    public string Destination { get; set; }
-    public DateTime ExpectedTime { get; set; }
-    public string Status { get; set; }
+        public string FlightNumber { get; set; }
+        public string Origin { get; set; }
+        public string Destination { get; set; }
+        public DateTime ExpectedTime { get; set; }
+        public string Status { get; set; }
 
-    public double CalculateFees()
+        public Flight(string flightNumber, string origin, string destination, DateTime expectedTime)
         {
-        // Placeholder implementation
-        return 0;
+            FlightNumber = flightNumber;
+            Origin = origin;
+            Destination = destination;
+            ExpectedTime = expectedTime;
         }
+        public abstract double CalculateFees();
 
-    public override string ToString()
+        public override string ToString()
         {
-        return $"{FlightNumber} from {Origin} to {Destination} at {ExpectedTime:dd/M/yyyy h:mm:ss tt}";
+            return $"Flight {FlightNumber} from {Origin} to {Destination}, Expected: {ExpectedTime}, Status: {Status}";
         }
     }
+}
