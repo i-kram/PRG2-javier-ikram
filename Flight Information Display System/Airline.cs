@@ -7,46 +7,46 @@ namespace FlightInformationDisplaySystem
     {
         public string Name { get; set; }
         public string Code { get; set; }
-        public Dictionary<string, Flight> Flights { get; set; }
-
-        public Airline()
-        {
-            Flights = new Dictionary<string, Flight>();
-        }
+        public Dictionary<string, Flight> Flights { get; set; } = new Dictionary<string, Flight>();
 
         public bool AddFlight(Flight flight)
         {
-            if (flight == null || string.IsNullOrEmpty(flight.FlightNumber))
+            if (flight == null) return false;
+            if (Flights.ContainsKey(flight.FlightNumber))
                 return false;
 
             Flights[flight.FlightNumber] = flight;
             return true;
         }
 
+
+        public bool RemoveFlight(Flight flight)
+        {
+            if (flight == null) return false;
+            return Flights.Remove(flight.FlightNumber);
+        }
+
+
         public double CalculateFees()
         {
             double totalFees = 0;
-            if (Flights != null)
+            foreach (var flight in Flights.Values)
             {
-                foreach (var flight in Flights.Values)
-                {
-                    totalFees += flight.CalculateFees();
-                }
+                totalFees += flight.CalculateFees();
             }
             return totalFees;
         }
 
-        public bool RemoveFlight(Flight flight)
-        {
-            if (flight == null || string.IsNullOrEmpty(flight.FlightNumber))
-                return false;
-
-            return Flights != null && Flights.Remove(flight.FlightNumber);
-        }
-
         public override string ToString()
         {
-            return $"Airline: {Name}, Code: {Code}, Flights: {Flights?.Count ?? 0}";
+            return $"Airline: {Name}, Code: {Code}, Flights: {Flights.Count}";
+        }
+
+        public Airline(string name, string code)
+        {
+            Name = name;
+            Code = code;
         }
     }
+}
 }
