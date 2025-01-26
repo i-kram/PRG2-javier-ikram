@@ -1,28 +1,31 @@
 ﻿using System;
 
 namespace FlightInformationDisplaySystem
-{
-    public abstract class Flight
     {
+    public class Flight
+        {
         public string FlightNumber { get; set; }
         public string Origin { get; set; }
         public string Destination { get; set; }
         public DateTime ExpectedTime { get; set; }
         public string Status { get; set; }
 
-        public Flight(string flightNumber, string origin, string destination, DateTime expectedTime, string status)
-        {
+        public Flight(string flightNumber, string origin, string destination, DateTime expectedTime)
+            {
             FlightNumber = flightNumber;
             Origin = origin;
             Destination = destination;
             ExpectedTime = expectedTime;
-            Status = status;
-        }
-        public abstract double CalculateFees();
+            }
+        public virtual double CalculateFees()
+            {
+            return 0;
+            }
+
 
         public override string ToString()
-        {
+            {
             return $"Flight {FlightNumber} from {Origin} to {Destination}, Expected: {ExpectedTime}, Status: {Status}";
+            }
         }
     }
-}
