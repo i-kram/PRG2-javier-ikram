@@ -10,11 +10,11 @@ namespace FlightInformationDisplaySystem
         public bool SupportsLWTT { get; set; }
         public Flight Flight { get; set; }
 
-        public BoardingGate(string gateName, bool supportsCFFT, bool supportsDDJB, bool supportsLWTT, Flight flight)
+        public BoardingGate(string gateName, bool supportsDDJB, bool supportsCFFT, bool supportsLWTT, Flight flight)
             {
             GateName = gateName;
-            SupportsCFFT = supportsCFFT;
             SupportsDDJB = supportsDDJB;
+            SupportsCFFT = supportsCFFT;
             SupportsLWTT = supportsLWTT;
             Flight = flight;
             }

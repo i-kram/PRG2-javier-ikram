@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "S10267028_S10267420_PRG2Assignment_Flight Information Display System/1.0.0": {
+        "runtime": {
+          "S10267028_S10267420_PRG2Assignment_Flight Information Display System.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "S10267028_S10267420_PRG2Assignment_Flight Information Display System/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

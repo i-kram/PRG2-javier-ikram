@@ -316,7 +316,7 @@ using System.IO;
 using FlightInformationDisplaySystem;
 
 List<Airline> Airlines = new List<Airline>();
-List<BoardingGate> BoardingGates = new List<BoardingGate>();
+Dictionary<string, BoardingGate> BoardingGates = new Dictionary<string, BoardingGate>();
 List<Flight> Flights = new List<Flight>();
 
 //Basic Feature 1
@@ -367,7 +367,7 @@ void LoadBoardingGates(string filename)
                     ConvertToBoolean(parts[3]),
                     null // Or a valid Flight object if needed
                 );
-                BoardingGates.Add(gate);
+                BoardingGates[gate.GateName] = gate;
                 }
             }
         Console.WriteLine($"{BoardingGates.Count} Boarding Gates Loaded!");
@@ -467,15 +467,16 @@ void ListBoardingGates()
     Console.WriteLine("{0,-15}{1,-22}{2,-22}{3,-22}",
         "Gate Name", "DDJB", "CFFT", "LWTT");
 
-    foreach (BoardingGate gate in BoardingGates)
-        {
+    foreach (KeyValuePair<string, BoardingGate> gateEntry in BoardingGates)
+    {
+        BoardingGate gate = gateEntry.Value;
         Console.WriteLine("{0,-15}{1,-22}{2,-22}{3,-22}",
             gate.GateName,
             gate.SupportsDDJB ? "True" : "False",
             gate.SupportsCFFT ? "True" : "False",
             gate.SupportsLWTT ? "True" : "False");
-        }
     }
+}
 
 
 //Basic Feature 7
