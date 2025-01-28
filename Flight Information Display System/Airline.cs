@@ -1,4 +1,9 @@
-﻿using System;
+﻿//==========================================================
+// Student Number	: S10267420
+// Student Name	: Muhammad Ikram
+// Partner Name	: Javier Yeo
+//==========================================================
+using System;
 using System.Collections.Generic;
 
 namespace FlightInformationDisplaySystem

@@ -1,4 +1,9 @@
-﻿using System;
+﻿//==========================================================
+// Student Number	: S10267420
+// Student Name	: Muhammad Ikram
+// Partner Name	: Javier Yeo
+//==========================================================
+using System;
 
 namespace FlightInformationDisplaySystem
     {
@@ -21,7 +26,6 @@ namespace FlightInformationDisplaySystem
             {
             return 0;
             }
-
 
         public override string ToString()
             {

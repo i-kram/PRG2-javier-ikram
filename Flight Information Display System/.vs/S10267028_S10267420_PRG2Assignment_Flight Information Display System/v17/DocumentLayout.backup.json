@@ -11,16 +11,16 @@
       "RelativeMoniker": "D:0:0:{BF57DFB7-5487-4C9D-BA51-62A6E8F038A2}|S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj|solutionrelative:boardinggate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{BF57DFB7-5487-4C9D-BA51-62A6E8F038A2}|S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj|c:\\users\\merci\\desktop\\prg2\\prg2-javier-ikram\\flight information display system\\flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF57DFB7-5487-4C9D-BA51-62A6E8F038A2}|S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj|solutionrelative:flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BF57DFB7-5487-4C9D-BA51-62A6E8F038A2}|S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj|c:\\users\\merci\\desktop\\prg2\\prg2-javier-ikram\\flight information display system\\cfft.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF57DFB7-5487-4C9D-BA51-62A6E8F038A2}|S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj|solutionrelative:cfft.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BF57DFB7-5487-4C9D-BA51-62A6E8F038A2}|S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj|c:\\users\\merci\\desktop\\prg2\\prg2-javier-ikram\\flight information display system\\ddjb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BF57DFB7-5487-4C9D-BA51-62A6E8F038A2}|S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj|solutionrelative:ddjb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF57DFB7-5487-4C9D-BA51-62A6E8F038A2}|S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj|c:\\users\\merci\\desktop\\prg2\\prg2-javier-ikram\\flight information display system\\flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF57DFB7-5487-4C9D-BA51-62A6E8F038A2}|S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj|solutionrelative:flight.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BF57DFB7-5487-4C9D-BA51-62A6E8F038A2}|S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj|c:\\users\\merci\\desktop\\prg2\\prg2-javier-ikram\\flight information display system\\lwtt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -56,75 +56,10 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAF0CAAAAAAAAAAAkwG8CAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-19T13:44:36.255Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Airline.cs",
-              "DocumentMoniker": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\Airline.cs",
-              "RelativeDocumentMoniker": "Airline.cs",
-              "ToolTip": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\Airline.cs",
-              "RelativeToolTip": "Airline.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAgwCsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-19T14:32:00.259Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "NORM.cs",
-              "DocumentMoniker": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\NORM.cs",
-              "RelativeDocumentMoniker": "NORM.cs",
-              "ToolTip": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\NORM.cs",
-              "RelativeToolTip": "NORM.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAkwBgAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T05:06:24.233Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "LWTT.cs",
-              "DocumentMoniker": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\LWTT.cs",
-              "RelativeDocumentMoniker": "LWTT.cs",
-              "ToolTip": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\LWTT.cs",
-              "RelativeToolTip": "LWTT.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAkwBcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T05:06:23.715Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DDJB.cs",
-              "DocumentMoniker": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\DDJB.cs",
-              "RelativeDocumentMoniker": "DDJB.cs",
-              "ToolTip": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\DDJB.cs",
-              "RelativeToolTip": "DDJB.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAkwBcAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T05:06:22.364Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CFFT.cs",
-              "DocumentMoniker": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\CFFT.cs",
-              "RelativeDocumentMoniker": "CFFT.cs",
-              "ToolTip": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\CFFT.cs",
-              "RelativeToolTip": "CFFT.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAkwBwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-26T05:06:21.611Z",
               "EditorCaption": ""
             },
             {
@@ -141,13 +76,78 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Airline.cs",
+              "DocumentMoniker": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\Airline.cs",
+              "RelativeDocumentMoniker": "Airline.cs",
+              "ToolTip": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\Airline.cs",
+              "RelativeToolTip": "Airline.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-19T14:32:00.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NORM.cs",
+              "DocumentMoniker": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\NORM.cs",
+              "RelativeDocumentMoniker": "NORM.cs",
+              "ToolTip": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\NORM.cs",
+              "RelativeToolTip": "NORM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T05:06:24.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LWTT.cs",
+              "DocumentMoniker": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\LWTT.cs",
+              "RelativeDocumentMoniker": "LWTT.cs",
+              "ToolTip": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\LWTT.cs",
+              "RelativeToolTip": "LWTT.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T05:06:23.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "DDJB.cs",
+              "DocumentMoniker": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\DDJB.cs",
+              "RelativeDocumentMoniker": "DDJB.cs",
+              "ToolTip": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\DDJB.cs",
+              "RelativeToolTip": "DDJB.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T05:06:22.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CFFT.cs",
+              "DocumentMoniker": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\CFFT.cs",
+              "RelativeDocumentMoniker": "CFFT.cs",
+              "ToolTip": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\CFFT.cs",
+              "RelativeToolTip": "CFFT.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T05:06:21.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Flight.cs",
               "DocumentMoniker": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\Flight.cs",
               "RelativeDocumentMoniker": "Flight.cs",
               "ToolTip": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\Flight.cs",
               "RelativeToolTip": "Flight.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA5wBQAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-19T14:32:28.483Z",
               "EditorCaption": ""
@@ -160,7 +160,7 @@
               "RelativeDocumentMoniker": "BoardingGate.cs",
               "ToolTip": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\BoardingGate.cs",
               "RelativeToolTip": "BoardingGate.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAgwDEAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-19T14:32:17.187Z",
               "EditorCaption": ""
@@ -173,7 +173,7 @@
               "RelativeDocumentMoniker": "Terminal.cs",
               "ToolTip": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\Terminal.cs",
               "RelativeToolTip": "Terminal.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAkwDwAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-19T14:31:49.757Z",
               "EditorCaption": ""
