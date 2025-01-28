@@ -7,7 +7,8 @@ using System;
 
 namespace FlightInformationDisplaySystem
     {
-    public class Flight
+    // Abstract Flight class
+    public abstract class Flight
         {
         public string FlightNumber { get; set; }
         public string Origin { get; set; }
@@ -22,10 +23,8 @@ namespace FlightInformationDisplaySystem
             Destination = destination;
             ExpectedTime = expectedTime;
             }
-        public virtual double CalculateFees()
-            {
-            return 0;
-            }
+
+        public abstract double CalculateFees();
 
         public override string ToString()
             {

@@ -10,48 +10,42 @@ namespace FlightInformationDisplaySystem
     {
     public class Airline
         {
-        public string Name { get; set; }
         public string Code { get; set; }
-        public Dictionary<string, Flight> Flights { get; set; }
+        public string Name { get; set; }
+        public List<Flight> Flights { get; set; } = new List<Flight>();
 
-        public Airline()
+        public Airline(string name, string code)
             {
-            Flights = new Dictionary<string, Flight>();
+            Name = name;
+            Code = code;
             }
 
-        public bool AddFlight(Flight flight)
+        // Adds a flight to the airline
+        public void AddFlight(Flight flight)
             {
-            if (flight == null) return false;
-            if (Flights.ContainsKey(flight.FlightNumber))
-                return false;
-
-            Flights[flight.FlightNumber] = flight;
-            return true;
+            Flights.Add(flight);
             }
 
+        // Removes a flight from the airline
+        public bool RemoveFlight(Flight flight)
+            {
+            return Flights.Remove(flight);
+            }
+
+        // Calculates the total fees for all flights under the airline
         public double CalculateFees()
             {
             double totalFees = 0;
-            foreach (var flight in Flights.Values)
+            foreach (var flight in Flights)
                 {
                 totalFees += flight.CalculateFees();
                 }
             return totalFees;
             }
 
-        public bool RemoveFlight(Flight flight)
-            {
-            if (flight == null || string.IsNullOrEmpty(flight.FlightNumber))
-                return false;
-
-            return Flights != null && Flights.Remove(flight.FlightNumber);
-            }
-
-
         public override string ToString()
             {
-            return $"Airline: {Name}, Code: {Code}, Flights: {Flights?.Count ?? 0}";
+            return $"Airline {Name} ({Code}), Flights: {Flights.Count}";
             }
-
         }
     }

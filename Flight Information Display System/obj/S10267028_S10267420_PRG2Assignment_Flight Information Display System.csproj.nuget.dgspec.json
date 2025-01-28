@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj": {}
+    "C:\\Users\\merci\\Desktop\\PRG2\\Current\\PRG2-javier-ikram\\Flight Information Display System\\S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj": {}
   },
   "projects": {
-    "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj": {
+    "C:\\Users\\merci\\Desktop\\PRG2\\Current\\PRG2-javier-ikram\\Flight Information Display System\\S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj",
+        "projectUniqueName": "C:\\Users\\merci\\Desktop\\PRG2\\Current\\PRG2-javier-ikram\\Flight Information Display System\\S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj",
         "projectName": "S10267028_S10267420_PRG2Assignment_Flight Information Display System",
-        "projectPath": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj",
+        "projectPath": "C:\\Users\\merci\\Desktop\\PRG2\\Current\\PRG2-javier-ikram\\Flight Information Display System\\S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj",
         "packagesPath": "C:\\Users\\merci\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\merci\\Desktop\\PRG2\\PRG2-javier-ikram\\Flight Information Display System\\obj\\",
+        "outputPath": "C:\\Users\\merci\\Desktop\\PRG2\\Current\\PRG2-javier-ikram\\Flight Information Display System\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\merci\\AppData\\Roaming\\NuGet\\NuGet.Config",

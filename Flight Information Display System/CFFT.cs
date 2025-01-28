@@ -9,7 +9,7 @@ namespace FlightInformationDisplaySystem
     {
     public class CFFTFlight : Flight
         {
-        public double RequestFee { get; set; }
+        public double RequestFee { get; set; } = 150;
 
         public CFFTFlight(string flightNumber, string origin, string destination, DateTime expectedTime, double requestFee)
             : base(flightNumber, origin, destination, expectedTime)

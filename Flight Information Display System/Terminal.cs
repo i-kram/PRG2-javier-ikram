@@ -13,7 +13,7 @@ namespace FlightInformationDisplaySystem
     {
     public class Terminal
         {
-        public string TerminalName { get; set; }
+        public string? TerminalName { get; set; }
         private Dictionary<string, Airline> airlines = new Dictionary<string, Airline>();
         private Dictionary<string, Flight> flights = new Dictionary<string, Flight>();
         private Dictionary<string, BoardingGate> boardingGates = new Dictionary<string, BoardingGate>();
