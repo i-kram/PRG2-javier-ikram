@@ -870,6 +870,63 @@ void CalculateTotalFeesPerAirline()
     }
 }
 
+//Advanced Feature: Flight Status Updates
+void UpdateFlightStatuses()
+{
+    Console.WriteLine("=============================================");
+    Console.WriteLine("Automated Flight Status Updates");
+    Console.WriteLine("=============================================");
+
+    DateTime currentTime = DateTime.Now;
+
+    foreach (Flight flight in Flights.Values)
+    {
+        TimeSpan timeUntilDeparture = flight.ExpectedTime - currentTime;
+        bool hasGate = false;
+
+        foreach (var gate in BoardingGates.Values)
+        {
+            if (gate.Flight == flight)
+            {
+                hasGate = true;
+                break;
+            }
+        }
+
+        if (timeUntilDeparture.TotalMinutes <= 30 && !hasGate)
+        {
+            flight.Status = "Boarding";
+            Console.WriteLine($"Flight {flight.FlightNumber} is now Boarding.");
+        }
+        else if (timeUntilDeparture.TotalMinutes <= 0 && hasGate)
+        {
+            flight.Status = "Departed";
+            Console.WriteLine($"Flight {flight.FlightNumber} has Departed.");
+        }
+        else if (flight.Status == "Delayed" && timeUntilDeparture.TotalMinutes < -60)
+        {
+            Console.WriteLine($"Flight {flight.FlightNumber} is Delayed by more than 60 minutes.");
+        }
+    }
+
+    Console.Write("Would you like to manually cancel a flight? (Y/N): ");
+    string response = Console.ReadLine().ToUpper();
+    if (response == "Y")
+    {
+        Console.Write("Enter Flight Number: ");
+        string flightNumber = Console.ReadLine().ToUpper();
+        if (Flights.ContainsKey(flightNumber))
+        {
+            Flights[flightNumber].Status = "Cancelled";
+            Console.WriteLine($"Flight {flightNumber} has been Cancelled.");
+        }
+        else
+        {
+            Console.WriteLine("Invalid Flight Number.");
+        }
+    }
+}
+
 void MainMenu()
     {
     Console.WriteLine("\n\n\n=============================================");
@@ -884,6 +941,8 @@ void MainMenu()
     Console.WriteLine("7. Display Flight Schedule");
     Console.WriteLine("8. Bulk Assign Boarding Gates");
     Console.WriteLine("9. Display total fee per airline for the day");
+    Console.WriteLine("10. Update Flight Statuses");
+    Console.WriteLine("11. Predictive Delay Notification");
     Console.WriteLine("0. Exit");
     Console.WriteLine("\nPlease select your option: ");
 }
@@ -934,6 +993,14 @@ void Run()
         else if (choice == "9")
         {
             CalculateTotalFeesPerAirline();
+        }
+        else if (choice == "10")
+        {
+            UpdateFlightStatuses();
+        }
+        else if (choice == "11")
+        {
+            PredictiveDelayNotification();
         }
 
         else if (choice == "0")

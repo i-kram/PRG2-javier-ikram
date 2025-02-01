@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("S10267028_S10267420_PRG2Assignment_Flight Information Display System")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3da5f54eba64bc19382908b39c4cf1ba1d8d207c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dbb9786034615d3b90324bb47e705b7f6b8d5c19")]
 [assembly: System.Reflection.AssemblyProductAttribute("S10267028_S10267420_PRG2Assignment_Flight Information Display System")]
 [assembly: System.Reflection.AssemblyTitleAttribute("S10267028_S10267420_PRG2Assignment_Flight Information Display System")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
