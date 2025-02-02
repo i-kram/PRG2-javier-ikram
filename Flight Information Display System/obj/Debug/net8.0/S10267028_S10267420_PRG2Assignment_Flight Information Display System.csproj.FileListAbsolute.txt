@@ -51,3 +51,4 @@ C:\Users\merci\Desktop\PRG2\Current\PRG2-javier-ikram\Flight Information Display
 C:\Users\merci\Desktop\PRG2\Current\PRG2-javier-ikram\Flight Information Display System\obj\Debug\net8.0\S10267028_S10267420_PRG2Assignment_Flight Information Display System.pdb
 C:\Users\merci\Desktop\PRG2\Current\PRG2-javier-ikram\Flight Information Display System\obj\Debug\net8.0\S10267028_S10267420_PRG2Assignment_Flight Information Display System.genruntimeconfig.cache
 C:\Users\merci\Desktop\PRG2\Current\PRG2-javier-ikram\Flight Information Display System\obj\Debug\net8.0\ref\S10267028_S10267420_PRG2Assignment_Flight Information Display System.dll
+C:\Users\merci\Desktop\PRG2\Current\PRG2-javier-ikram\Flight Information Display System\bin\Debug\net8.0\flights.csv

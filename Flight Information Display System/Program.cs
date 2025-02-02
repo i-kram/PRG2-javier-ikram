@@ -290,7 +290,9 @@ void CreateFlight()
         catch (Exception)
         {
             Console.WriteLine("Invalid date or time format. Please use the format: dd/MM/yyyy HH:mm.");
-            return; // Exit the method and return to the main menu
+            CreateFlight();
+            return;
+            
         }
 
         Console.Write("Enter Special Request Code (CFFT/DDJB/LWTT/None): ");
@@ -920,90 +922,69 @@ void CalculateTotalFeesPerAirline()
 
 
 
-//Advanced Feature: Flight Status Updates
-void UpdateFlightStatuses()
-{
-    Console.WriteLine("=============================================");
-    Console.WriteLine("Automated Flight Status Updates");
-    Console.WriteLine("=============================================");
 
+//Advanced feature: Update Flight Status
+void UpdateFlightStatus()
+    {
     DateTime currentTime = DateTime.Now;
 
-    foreach (Flight flight in Flights.Values)
-    {
-        TimeSpan timeUntilDeparture = flight.ExpectedTime - currentTime;
-        bool hasGate = false;
-
-        foreach (var gate in BoardingGates.Values)
+    foreach (var flight in Flights.Values)
         {
-            if (gate.Flight == flight)
+        if (flight.ExpectedTime < currentTime)
             {
-                hasGate = true;
+            flight.Status = "Delayed";
+            }
+        else if ((flight.ExpectedTime - currentTime).TotalMinutes <= 30)
+            {
+            flight.Status = flight.Status.Contains("Departure") ? "Departing" : "Arriving";
+            }
+        }
+
+    Console.WriteLine("=============================================");
+    Console.WriteLine("Updated Flight Status for Changi Airport Terminal 5");
+    Console.WriteLine("=============================================");
+    Console.WriteLine("{0,-15} {1,-23} {2,-22} {3,-20} {4,-34} {5,-15} {6,-15}",
+                      "Flight Number", "Airline Name", "Origin", "Destination", "Expected Departure/Arrival Time", "Status", "Boarding Gate");
+
+    List<Flight> sortedFlights = new List<Flight>(Flights.Values);
+    sortedFlights.Sort((a, b) => a.ExpectedTime.CompareTo(b.ExpectedTime));
+
+    foreach (Flight flight in sortedFlights)
+        {
+        string airlineName = "Unknown";
+        string airlineCode = flight.FlightNumber.Split(' ')[0];
+        if (Airlines.ContainsKey(airlineCode))
+            {
+            airlineName = Airlines[airlineCode].Name;
+            }
+
+        string boardingGate = "Unassigned";
+        foreach (var gate in BoardingGates)
+            {
+            if (gate.Value.Flight == flight)
+                {
+                boardingGate = gate.Key;
                 break;
+                }
             }
-        }
 
-        if (timeUntilDeparture.TotalMinutes <= 30 && !hasGate)
-        {
-            flight.Status = "Boarding";
-            Console.WriteLine($"Flight {flight.FlightNumber} is now Boarding.");
-        }
-        else if (timeUntilDeparture.TotalMinutes <= 0 && hasGate)
-        {
-            flight.Status = "Departed";
-            Console.WriteLine($"Flight {flight.FlightNumber} has Departed.");
-        }
-        else if (flight.Status == "Delayed" && timeUntilDeparture.TotalMinutes < -60)
-        {
-            Console.WriteLine($"Flight {flight.FlightNumber} is Delayed by more than 60 minutes.");
+        string specialRequest = "None";
+        if (flight is DDJBFlight) specialRequest = "DDJB";
+        else if (flight is CFFTFlight) specialRequest = "CFFT";
+        else if (flight is LWTTFlight) specialRequest = "LWTT";
+
+        Console.WriteLine("{0,-15} {1,-23} {2,-22} {3,-20} {4,-34} {5,-15} {6,-15}",
+            flight.FlightNumber,
+            airlineName,
+            flight.Origin,
+            flight.Destination,
+            flight.ExpectedTime.ToString("d/M/yyyy h:mm:ss tt"),
+            flight.Status ?? "Scheduled",
+            boardingGate);
         }
     }
 
-    Console.Write("Would you like to manually cancel a flight? (Y/N): ");
-    string response = Console.ReadLine().ToUpper();
-    if (response == "Y")
-    {
-        Console.Write("Enter Flight Number: ");
-        string flightNumber = Console.ReadLine().ToUpper();
-        if (Flights.ContainsKey(flightNumber))
-        {
-            Flights[flightNumber].Status = "Cancelled";
-            Console.WriteLine($"Flight {flightNumber} has been Cancelled.");
-        }
-        else
-        {
-            Console.WriteLine("Invalid Flight Number.");
-        }
-    }
-}
 
-//Advanced Feature: Predictive Delay Notification
-void PredictiveDelayNotification()
-    {
-    Console.WriteLine("=============================================");
-    Console.WriteLine("Predictive Delay Notification System");
-    Console.WriteLine("=============================================");
-
-    DateTime currentTime = DateTime.Now;
-
-    foreach (Flight flight in Flights.Values)
-        {
-        TimeSpan timeUntilDeparture = flight.ExpectedTime - currentTime;
-
-        if (timeUntilDeparture.TotalMinutes < 60 && timeUntilDeparture.TotalMinutes > 30)
-            {
-            Console.WriteLine($"Warning: Flight {flight.FlightNumber} might be delayed due to operational constraints.");
-            }
-        else if (timeUntilDeparture.TotalMinutes <= 30 && timeUntilDeparture.TotalMinutes > 10)
-            {
-            Console.WriteLine($"Urgent: Flight {flight.FlightNumber} is at high risk of delay. Immediate attention required.");
-            }
-        else if (timeUntilDeparture.TotalMinutes <= 10)
-            {
-            Console.WriteLine($"Critical: Flight {flight.FlightNumber} is likely delayed. Update the passengers immediately.");
-            }
-        }
-    }
 
 void MainMenu()
     {
@@ -1019,8 +1000,7 @@ void MainMenu()
     Console.WriteLine("7. Display Flight Schedule");
     Console.WriteLine("8. Bulk Assign Boarding Gates");
     Console.WriteLine("9. Display total fee per airline for the day");
-    Console.WriteLine("10. Update Flight Statuses");
-    Console.WriteLine("11. Predictive Delay Notification");
+    Console.WriteLine("10. Update flight status");
     Console.WriteLine("0. Exit");
     Console.WriteLine("\nPlease select your option: ");
 }
@@ -1074,11 +1054,7 @@ void Run()
             }
         else if (choice == "10")
             {
-            UpdateFlightStatuses();
-            }
-        else if (choice == "11")
-            {
-            PredictiveDelayNotification();
+            UpdateFlightStatus();
             }
         else if (choice == "0")
             {
@@ -1099,4 +1075,5 @@ void Run()
     }
 
     Main();
+
 
