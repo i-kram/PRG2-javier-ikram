@@ -262,16 +262,16 @@ void AssignBoardingGate()
 
 //Basic Feature 6
 void CreateFlight()
-    {
+{
     while (true)
-        {
+    {
         Console.Write("Enter Flight Number: ");
         string flightNumber = Console.ReadLine().ToUpper();
         if (Flights.ContainsKey(flightNumber))
-            {
+        {
             Console.WriteLine("Flight already exists. Please enter a different Flight Number.");
-            continue;
-            }
+            return; // Exit the method and return to the main menu
+        }
 
         Console.Write("Enter Origin: ");
         string origin = Console.ReadLine();
@@ -284,54 +284,54 @@ void CreateFlight()
 
         DateTime expectedDateTime;
         try
-            {
+        {
             expectedDateTime = DateTime.ParseExact(dateTimeInput, "dd/MM/yyyy HH:mm", null);
-            }
+        }
         catch (Exception)
-            {
+        {
             Console.WriteLine("Invalid date or time format. Please use the format: dd/MM/yyyy HH:mm.");
-            continue;
-            }
+            return; // Exit the method and return to the main menu
+        }
 
         Console.Write("Enter Special Request Code (CFFT/DDJB/LWTT/None): ");
         string requestCode = Console.ReadLine().ToUpper();
         Flight newFlight;
 
         if (requestCode == "CFFT")
-            {
+        {
             newFlight = new CFFTFlight(flightNumber, origin, destination, expectedDateTime, 150);
-            }
+        }
         else if (requestCode == "DDJB")
-            {
+        {
             newFlight = new DDJBFlight(flightNumber, origin, destination, expectedDateTime, 300);
-            }
+        }
         else if (requestCode == "LWTT")
-            {
+        {
             newFlight = new LWTTFlight(flightNumber, origin, destination, expectedDateTime, 500);
-            }
+        }
         else
-            {
+        {
             newFlight = new NORMFlight(flightNumber, origin, destination, expectedDateTime);
-            }
+        }
 
         Flights[flightNumber] = newFlight;
 
         using (StreamWriter writer = new StreamWriter("flights.csv", true))
-            {
+        {
             // Write the flight details including the time formatted as "hh:mm tt"
             writer.WriteLine($"{flightNumber},{origin},{destination},{expectedDateTime:hh:mm tt},{requestCode}");
-            }
+        }
 
         Console.WriteLine($"Flight {flightNumber} has been added!");
 
         Console.WriteLine("Would you like to add another flight? (Y/N): ");
         string response = Console.ReadLine().ToUpper();
         if (response != "Y")
-            {
+        {
             break;
-            }
         }
     }
+}
 
 //Basic Feature 7
 void DisplayAirlineFlights(Dictionary<string, BoardingGate> BoardingGates)
@@ -607,7 +607,7 @@ void ModifyFlightDetails()
     }
 
 
-//Basic Feature 9
+// Basic Feature 9: Display Flight Schedule
 void DisplayFlightSchedule()
 {
     Console.WriteLine("=============================================");
@@ -638,17 +638,21 @@ void DisplayFlightSchedule()
             }
         }
 
+        string specialRequest = "None";
+        if (flight is DDJBFlight) specialRequest = "DDJB";
+        else if (flight is CFFTFlight) specialRequest = "CFFT";
+        else if (flight is LWTTFlight) specialRequest = "LWTT";
+
         Console.WriteLine("{0,-15} {1,-23} {2,-22} {3,-20} {4,-34} {5,-15} {6,-15}",
             flight.FlightNumber,
             airlineName,
-            $"{flight.Origin}",
-            $"{flight.Destination}",
+            flight.Origin,
+            flight.Destination,
             flight.ExpectedTime.ToString("d/M/yyyy h:mm:ss tt"),
             flight.Status ?? "Scheduled",
             boardingGate);
     }
 }
-
 
 string GetAirportCode(string airportName)
 {
@@ -1001,45 +1005,6 @@ void PredictiveDelayNotification()
         }
     }
 
-void CleanUpFlights(string filename)
-    {
-    Console.WriteLine("Cleaning Up Flights...");
-    try
-        {
-        // Read all the lines from the file
-        string[] lines = File.ReadAllLines(filename);
-        List<string> cleanedLines = new List<string>();
-
-        // Add the header back
-        cleanedLines.Add(lines[0]);
-
-        // Loop through each flight, filter out unwanted flights (e.g., test flights)
-        for (int i = 1; i < lines.Length; i++)
-            {
-            string[] parts = lines[i].Split(',');
-
-            // Define criteria to identify and remove test flights (here assuming test flights start with "TEST")
-            if (parts[0].StartsWith("TEST"))
-                {
-                Console.WriteLine($"Removing test flight: {parts[0]}");
-                continue; // Skip this test flight
-                }
-
-            // Add valid flights back to the cleaned list
-            cleanedLines.Add(lines[i]);
-            }
-
-        // Rewrite the cleaned list back to the file
-        File.WriteAllLines(filename, cleanedLines.ToArray());
-        Console.WriteLine($"File cleaned. {cleanedLines.Count - 1} flights remain.");
-        }
-    catch (Exception ex)
-        {
-        Console.WriteLine($"Error during cleanup: {ex.Message}");
-        }
-    }
-
-
 void MainMenu()
     {
     Console.WriteLine("\n\n\n\n=============================================");
@@ -1056,7 +1021,6 @@ void MainMenu()
     Console.WriteLine("9. Display total fee per airline for the day");
     Console.WriteLine("10. Update Flight Statuses");
     Console.WriteLine("11. Predictive Delay Notification");
-    Console.WriteLine("12");
     Console.WriteLine("0. Exit");
     Console.WriteLine("\nPlease select your option: ");
 }
@@ -1116,11 +1080,6 @@ void Run()
             {
             PredictiveDelayNotification();
             }
-        else if (choice == "12")
-            {
-            CleanUpFlights("flights.csv");
-            }
-
         else if (choice == "0")
             {
             Console.WriteLine("Goodbye!");
