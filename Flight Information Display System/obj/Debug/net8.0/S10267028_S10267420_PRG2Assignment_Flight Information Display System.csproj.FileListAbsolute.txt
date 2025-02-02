@@ -37,7 +37,6 @@ C:\Users\merci\Desktop\PRG2\PRG2-javier-ikram\Flight Information Display System\
 C:\Users\merci\Desktop\PRG2\Current\PRG2-javier-ikram\Flight Information Display System\bin\Debug\net8.0\S10267028_S10267420_PRG2Assignment_Flight Information Display System.exe
 C:\Users\merci\Desktop\PRG2\Current\PRG2-javier-ikram\Flight Information Display System\bin\Debug\net8.0\airlines.csv
 C:\Users\merci\Desktop\PRG2\Current\PRG2-javier-ikram\Flight Information Display System\bin\Debug\net8.0\boardinggates.csv
-C:\Users\merci\Desktop\PRG2\Current\PRG2-javier-ikram\Flight Information Display System\bin\Debug\net8.0\flights.csv
 C:\Users\merci\Desktop\PRG2\Current\PRG2-javier-ikram\Flight Information Display System\bin\Debug\net8.0\S10267028_S10267420_PRG2Assignment_Flight Information Display System.deps.json
 C:\Users\merci\Desktop\PRG2\Current\PRG2-javier-ikram\Flight Information Display System\bin\Debug\net8.0\S10267028_S10267420_PRG2Assignment_Flight Information Display System.runtimeconfig.json
 C:\Users\merci\Desktop\PRG2\Current\PRG2-javier-ikram\Flight Information Display System\bin\Debug\net8.0\S10267028_S10267420_PRG2Assignment_Flight Information Display System.dll

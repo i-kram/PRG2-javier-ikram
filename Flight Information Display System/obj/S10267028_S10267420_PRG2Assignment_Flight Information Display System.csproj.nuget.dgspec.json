@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Javier Yeo\\Downloads\\PRG 2\\Assignment\\PRG2-javier-ikram\\Flight Information Display System\\S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj": {}
+    "C:\\Users\\merci\\Desktop\\PRG2\\Current\\PRG2-javier-ikram\\Flight Information Display System\\S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Javier Yeo\\Downloads\\PRG 2\\Assignment\\PRG2-javier-ikram\\Flight Information Display System\\S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj": {
+    "C:\\Users\\merci\\Desktop\\PRG2\\Current\\PRG2-javier-ikram\\Flight Information Display System\\S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Javier Yeo\\Downloads\\PRG 2\\Assignment\\PRG2-javier-ikram\\Flight Information Display System\\S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj",
+        "projectUniqueName": "C:\\Users\\merci\\Desktop\\PRG2\\Current\\PRG2-javier-ikram\\Flight Information Display System\\S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj",
         "projectName": "S10267028_S10267420_PRG2Assignment_Flight Information Display System",
-        "projectPath": "C:\\Users\\Javier Yeo\\Downloads\\PRG 2\\Assignment\\PRG2-javier-ikram\\Flight Information Display System\\S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj",
-        "packagesPath": "C:\\Users\\Javier Yeo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Javier Yeo\\Downloads\\PRG 2\\Assignment\\PRG2-javier-ikram\\Flight Information Display System\\obj\\",
+        "projectPath": "C:\\Users\\merci\\Desktop\\PRG2\\Current\\PRG2-javier-ikram\\Flight Information Display System\\S10267028_S10267420_PRG2Assignment_Flight Information Display System.csproj",
+        "packagesPath": "C:\\Users\\merci\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\merci\\Desktop\\PRG2\\Current\\PRG2-javier-ikram\\Flight Information Display System\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Javier Yeo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\merci\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -38,7 +38,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "direct"
+          "auditMode": "all"
         }
       },
       "frameworks": {
@@ -55,12 +55,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.Net.Sdk.Compilers.Toolset",
+              "version": "[9.0.101, 9.0.101]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
